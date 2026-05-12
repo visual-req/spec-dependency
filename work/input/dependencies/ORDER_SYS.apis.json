@@ -1,0 +1,33 @@
+{
+  "system_id": "ORDER_SYS",
+  "apis": [
+    {
+      "id": "ORDER_CREATE",
+      "name": "创建订单",
+      "method": "POST",
+      "path": "/orders",
+      "keywords": ["下单", "创建订单", "订单提交", "orderNo"]
+    },
+    {
+      "id": "ORDER_DETAIL",
+      "name": "订单详情查询",
+      "method": "GET",
+      "path": "/orders/{id}",
+      "keywords": ["订单详情", "订单查询", "orderId", "orderNo"]
+    },
+    {
+      "id": "ORDER_CANCEL",
+      "name": "取消订单",
+      "method": "POST",
+      "path": "/orders/{id}/cancel",
+      "keywords": ["取消订单", "关闭订单", "cancel", "reason"]
+    },
+    {
+      "id": "ORDER_REFUND",
+      "name": "退款申请",
+      "method": "POST",
+      "path": "/orders/{id}/refund",
+      "keywords": ["退款", "退货", "售后", "refund"]
+    }
+  ]
+}

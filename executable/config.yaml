@@ -1,0 +1,10 @@
+llm:
+  base_url: https://api.deepseek.com/v1
+  model: deepseek-chat
+  api_key: YOUR_DEEPSEEK_API_KEY
+
+server:
+  host: 127.0.0.1
+  port: 8766
+
+work_dir: work

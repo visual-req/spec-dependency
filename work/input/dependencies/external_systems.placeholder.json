@@ -1,0 +1,318 @@
+{
+  "systems": [
+    {
+      "id": "PAY_ALIPAY",
+      "name": "支付宝",
+      "type": "external_platform",
+      "aliases": ["Alipay", "支付宝"],
+      "keywords": ["支付", "退款", "对账", "商户号"],
+      "apis": [
+        {
+          "id": "ALIPAY_PAY_CREATE",
+          "name": "创建支付",
+          "method": "POST",
+          "path": "/v1/pay",
+          "keywords": ["下单", "创建支付", "支付下单", "tradeNo", "amount"]
+        },
+        {
+          "id": "ALIPAY_REFUND",
+          "name": "退款",
+          "method": "POST",
+          "path": "/v1/refund",
+          "keywords": ["退款", "退单", "refund", "refundAmount"]
+        },
+        {
+          "id": "ALIPAY_QUERY",
+          "name": "支付查询",
+          "method": "GET",
+          "path": "/v1/query",
+          "keywords": ["查询支付", "订单查询", "trade_status", "query"]
+        }
+      ]
+    },
+    {
+      "id": "PAY_WECHAT",
+      "name": "微信支付",
+      "type": "external_platform",
+      "aliases": ["WeChatPay", "微信支付"],
+      "keywords": ["支付", "退款", "对账", "openid"],
+      "apis": [
+        {
+          "id": "WECHATPAY_PAY_CREATE",
+          "name": "创建支付",
+          "method": "POST",
+          "path": "/v3/pay/transactions/jsapi",
+          "keywords": ["下单", "JSAPI", "prepay_id", "openid"]
+        },
+        {
+          "id": "WECHATPAY_REFUND",
+          "name": "退款",
+          "method": "POST",
+          "path": "/v3/refund/domestic/refunds",
+          "keywords": ["退款", "refund", "refund_id"]
+        }
+      ]
+    },
+    {
+      "id": "SMS_PROVIDER",
+      "name": "短信网关",
+      "type": "external_service",
+      "aliases": ["SMS", "短信平台", "短信网关"],
+      "keywords": ["验证码", "短信", "通知短信"],
+      "apis": [
+        {
+          "id": "SMS_SEND",
+          "name": "发送短信",
+          "method": "POST",
+          "path": "/sms/send",
+          "keywords": ["发送短信", "验证码", "短信通知", "templateId"]
+        }
+      ]
+    },
+    {
+      "id": "NOTIFY_CENTER",
+      "name": "通知系统",
+      "type": "external_service",
+      "aliases": ["通知中心", "消息通知", "Notification", "通知系统"],
+      "keywords": ["通知", "站内信", "消息推送", "订阅"],
+      "apis": [
+        {
+          "id": "NOTIFY_SEND",
+          "name": "发送通知",
+          "method": "POST",
+          "path": "/notify/send",
+          "keywords": ["发送通知", "推送", "站内信", "topic", "channel"]
+        },
+        {
+          "id": "NOTIFY_SUBSCRIBE",
+          "name": "订阅/退订",
+          "method": "POST",
+          "path": "/notify/subscribe",
+          "keywords": ["订阅", "退订", "subscribe", "unsubscribe"]
+        }
+      ]
+    },
+    {
+      "id": "IDP",
+      "name": "统一认证中心",
+      "type": "identity",
+      "aliases": ["SSO", "OIDC", "OAuth2", "统一登录", "认证中心"],
+      "keywords": ["登录", "token", "授权", "单点登录"],
+      "apis": [
+        {
+          "id": "IDP_AUTH",
+          "name": "鉴权/登录",
+          "method": "POST",
+          "path": "/oauth/token",
+          "keywords": ["登录", "token", "授权码", "client_id", "client_secret"]
+        },
+        {
+          "id": "IDP_USERINFO",
+          "name": "用户信息",
+          "method": "GET",
+          "path": "/oauth/userinfo",
+          "keywords": ["userinfo", "用户信息", "claims"]
+        }
+      ]
+    },
+    {
+      "id": "CORE_BANK",
+      "name": "核心系统",
+      "type": "external_system",
+      "aliases": ["核心系统", "核心银行", "CoreBank"],
+      "keywords": ["账户", "余额", "交易", "账务"],
+      "apis": [
+        {
+          "id": "CORE_BALANCE",
+          "name": "余额查询",
+          "method": "GET",
+          "path": "/accounts/balance",
+          "keywords": ["余额查询", "账户余额", "balance"]
+        },
+        {
+          "id": "CORE_TRANSFER",
+          "name": "转账/交易",
+          "method": "POST",
+          "path": "/transactions/transfer",
+          "keywords": ["转账", "交易", "入账", "出账", "transactionId"]
+        }
+      ]
+    }
+    ,
+    {
+      "id": "OBJECT_STORAGE",
+      "name": "对象存储服务",
+      "type": "external_service",
+      "aliases": ["S3", "MinIO", "OSS", "COS", "对象存储"],
+      "keywords": ["附件", "文件上传", "文件下载", "存储桶", "bucket"],
+      "apis": [
+        {
+          "id": "OBJ_PUT",
+          "name": "上传对象",
+          "method": "PUT",
+          "path": "/objects/{key}",
+          "keywords": ["上传", "putObject", "上传文件", "objectKey"]
+        },
+        {
+          "id": "OBJ_GET",
+          "name": "下载对象",
+          "method": "GET",
+          "path": "/objects/{key}",
+          "keywords": ["下载", "getObject", "下载文件", "downloadUrl"]
+        }
+      ]
+    },
+    {
+      "id": "FACE_RECOG",
+      "name": "人脸识别服务",
+      "type": "external_service",
+      "aliases": ["人脸识别", "FaceRecognition", "FaceID", "活体检测"],
+      "keywords": ["人脸", "活体", "比对", "实名", "身份核验"],
+      "apis": [
+        {
+          "id": "FACE_VERIFY",
+          "name": "人脸核验",
+          "method": "POST",
+          "path": "/face/verify",
+          "keywords": ["人脸核验", "人脸比对", "face verify", "matchScore"]
+        },
+        {
+          "id": "FACE_LIVENESS",
+          "name": "活体检测",
+          "method": "POST",
+          "path": "/face/liveness",
+          "keywords": ["活体检测", "liveness", "眨眼", "动作检测"]
+        }
+      ]
+    },
+    {
+      "id": "VOICE_CALL",
+      "name": "语音呼叫服务",
+      "type": "external_service",
+      "aliases": ["语音呼叫", "VoiceCall", "外呼", "呼叫中心"],
+      "keywords": ["语音", "外呼", "呼叫", "通话", "IVR"],
+      "apis": [
+        {
+          "id": "VOICE_CALL_DIAL",
+          "name": "发起呼叫",
+          "method": "POST",
+          "path": "/voice/call",
+          "keywords": ["发起呼叫", "拨号", "外呼", "callee", "caller"]
+        },
+        {
+          "id": "VOICE_CALL_STATUS",
+          "name": "呼叫状态查询",
+          "method": "GET",
+          "path": "/voice/call/status",
+          "keywords": ["呼叫状态", "通话状态", "callId", "status"]
+        }
+      ]
+    },
+    {
+      "id": "BILLING_SYS",
+      "name": "账单系统",
+      "type": "external_system",
+      "aliases": ["Billing", "账单中心", "账单平台", "对账系统"],
+      "keywords": ["账单", "对账", "账单明细", "出账", "入账"],
+      "apis": [
+        {
+          "id": "BILL_QUERY",
+          "name": "账单查询",
+          "method": "GET",
+          "path": "/billing/bills",
+          "keywords": ["账单查询", "账单明细", "查询账单", "billId"]
+        },
+        {
+          "id": "BILL_EXPORT",
+          "name": "账单导出",
+          "method": "POST",
+          "path": "/billing/bills/export",
+          "keywords": ["账单导出", "导出对账单", "download", "export"]
+        }
+      ]
+    },
+    {
+      "id": "FINANCE_SYS",
+      "name": "财务系统",
+      "type": "external_system",
+      "aliases": ["Finance", "财务中心", "会计系统", "总账系统"],
+      "keywords": ["财务", "凭证", "总账", "科目", "会计分录"],
+      "apis": [
+        {
+          "id": "FIN_VOUCHER_CREATE",
+          "name": "生成凭证",
+          "method": "POST",
+          "path": "/finance/vouchers",
+          "keywords": ["生成凭证", "记账", "会计分录", "voucherNo"]
+        },
+        {
+          "id": "FIN_SUBJECT_QUERY",
+          "name": "科目查询",
+          "method": "GET",
+          "path": "/finance/subjects",
+          "keywords": ["科目", "会计科目", "subject", "accounting"]
+        }
+      ]
+    },
+    {
+      "id": "OA_SYS",
+      "name": "OA系统",
+      "type": "external_system",
+      "aliases": ["OA", "办公自动化", "OA系统"],
+      "keywords": ["流程", "审批", "请假", "报销", "公文", "合同"],
+      "apis": [
+        {
+          "id": "OA_PROCESS_START",
+          "name": "发起流程",
+          "method": "POST",
+          "path": "/oa/process/start",
+          "keywords": ["发起流程", "提交流程", "流程启动", "processKey", "form"]
+        },
+        {
+          "id": "OA_APPROVAL_SUBMIT",
+          "name": "提交审批",
+          "method": "POST",
+          "path": "/oa/approval/submit",
+          "keywords": ["审批", "提交审批", "同意", "驳回", "taskId"]
+        },
+        {
+          "id": "OA_TASK_STATUS",
+          "name": "审批状态查询",
+          "method": "GET",
+          "path": "/oa/task/status",
+          "keywords": ["审批状态", "流程状态", "status", "instanceId"]
+        }
+      ]
+    },
+    {
+      "id": "SIGN_SYS",
+      "name": "签名系统",
+      "type": "external_service",
+      "aliases": ["电子签", "签章系统", "签名系统", "eSign"],
+      "keywords": ["签名", "签章", "电子签", "合同签署", "盖章"],
+      "apis": [
+        {
+          "id": "SIGN_TASK_CREATE",
+          "name": "创建签署任务",
+          "method": "POST",
+          "path": "/sign/tasks",
+          "keywords": ["创建签署", "发起签署", "签署任务", "signTaskId"]
+        },
+        {
+          "id": "SIGN_TASK_STATUS",
+          "name": "签署状态查询",
+          "method": "GET",
+          "path": "/sign/tasks/{id}",
+          "keywords": ["签署状态", "签署结果", "completed", "status"]
+        },
+        {
+          "id": "SIGN_FILE_DOWNLOAD",
+          "name": "下载已签文件",
+          "method": "GET",
+          "path": "/sign/files/{id}/download",
+          "keywords": ["下载已签文件", "signed file", "downloadUrl"]
+        }
+      ]
+    }
+  ]
+}

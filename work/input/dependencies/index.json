@@ -1,0 +1,202 @@
+{
+  "systems": [
+    {
+      "id": "PAY_ALIPAY",
+      "name": "支付宝",
+      "type": "external_platform",
+      "aliases": ["Alipay", "支付宝"],
+      "keywords": ["支付", "退款", "对账", "商户号"],
+      "api_file": "PAY_ALIPAY.apis.json"
+    },
+    {
+      "id": "PAY_WECHAT",
+      "name": "微信支付",
+      "type": "external_platform",
+      "aliases": ["WeChatPay", "微信支付"],
+      "keywords": ["支付", "退款", "对账", "openid"],
+      "api_file": "PAY_WECHAT.apis.json"
+    },
+    {
+      "id": "SMS_PROVIDER",
+      "name": "短信网关",
+      "type": "external_service",
+      "aliases": ["SMS", "短信平台", "短信网关"],
+      "keywords": ["验证码", "短信", "通知短信"],
+      "api_file": "SMS_PROVIDER.apis.json"
+    },
+    {
+      "id": "NOTIFY_CENTER",
+      "name": "通知系统",
+      "type": "external_service",
+      "aliases": ["通知中心", "消息通知", "Notification", "通知系统"],
+      "keywords": ["通知", "站内信", "消息推送", "订阅"],
+      "api_file": "NOTIFY_CENTER.apis.json"
+    },
+    {
+      "id": "SSO",
+      "name": "SSO系统",
+      "type": "identity",
+      "aliases": ["SSO", "OIDC", "OAuth2", "统一登录", "认证中心", "统一认证中心"],
+      "keywords": ["登录", "token", "授权", "单点登录"],
+      "api_file": "SSO.apis.json"
+    },
+    {
+      "id": "CORE_BANK",
+      "name": "核心系统",
+      "type": "external_system",
+      "aliases": ["核心系统", "核心银行", "CoreBank"],
+      "keywords": ["账户", "余额", "交易", "账务"],
+      "api_file": "CORE_BANK.apis.json"
+    },
+    {
+      "id": "OBJECT_STORAGE",
+      "name": "对象存储服务",
+      "type": "external_service",
+      "aliases": ["S3", "MinIO", "OSS", "COS", "对象存储"],
+      "keywords": ["附件", "文件上传", "文件下载", "存储桶", "bucket"],
+      "api_file": "OBJECT_STORAGE.apis.json"
+    },
+    {
+      "id": "FACE_RECOG",
+      "name": "人脸识别服务",
+      "type": "external_service",
+      "aliases": ["人脸识别", "FaceRecognition", "FaceID", "活体检测"],
+      "keywords": ["人脸", "活体", "比对", "实名", "身份核验"],
+      "api_file": "FACE_RECOG.apis.json"
+    },
+    {
+      "id": "REALNAME_AUTH",
+      "name": "实名认证系统",
+      "type": "identity",
+      "description": "提供实名认证/身份核验能力（如三要素/四要素校验、实名核验、活体/人证比对等）。",
+      "aliases": ["实名认证", "实名认证系统", "身份核验", "实人认证", "实人核验", "KYC", "身份认证"],
+      "keywords": ["实名", "实名认证", "身份核验", "KYC", "三要素", "四要素", "人证比对", "活体检测"],
+      "apis": [
+        { "id": "RN_ID_VERIFY", "name": "实名核验", "method": "POST", "path": "/realname/verify", "keywords": ["实名核验", "身份证号", "姓名", "实名认证", "身份核验"] },
+        { "id": "RN_3_ELEM", "name": "三要素校验", "method": "POST", "path": "/realname/3elements", "keywords": ["三要素", "姓名", "身份证号", "手机号", "校验"] },
+        { "id": "RN_4_ELEM", "name": "四要素校验", "method": "POST", "path": "/realname/4elements", "keywords": ["四要素", "姓名", "身份证号", "银行卡号", "手机号", "校验"] },
+        { "id": "RN_FACE_ID", "name": "人证比对", "method": "POST", "path": "/realname/face-id", "keywords": ["人证比对", "人脸", "身份证", "比对", "活体"] }
+      ]
+    },
+    {
+      "id": "VOICE_CALL",
+      "name": "语音呼叫服务",
+      "type": "external_service",
+      "aliases": ["语音呼叫", "VoiceCall", "外呼", "呼叫中心"],
+      "keywords": ["语音", "外呼", "呼叫", "通话", "IVR"],
+      "api_file": "VOICE_CALL.apis.json"
+    },
+    {
+      "id": "BILLING_SYS",
+      "name": "账单系统",
+      "type": "external_system",
+      "aliases": ["Billing", "账单中心", "账单平台", "对账系统"],
+      "keywords": ["账单", "对账", "账单明细", "出账", "入账"],
+      "api_file": "BILLING_SYS.apis.json"
+    },
+    {
+      "id": "FINANCE_SYS",
+      "name": "财务系统",
+      "type": "external_system",
+      "aliases": ["Finance", "财务中心", "会计系统", "总账系统"],
+      "keywords": ["财务", "凭证", "总账", "科目", "会计分录"],
+      "api_file": "FINANCE_SYS.apis.json"
+    },
+    {
+      "id": "OA_SYS",
+      "name": "OA系统",
+      "type": "external_system",
+      "aliases": ["OA", "办公自动化", "OA系统"],
+      "keywords": ["流程", "审批", "请假", "报销", "公文", "合同"],
+      "api_file": "OA_SYS.apis.json"
+    },
+    {
+      "id": "SIGN_SYS",
+      "name": "签名系统",
+      "type": "external_service",
+      "aliases": ["电子签", "签章系统", "签名系统", "eSign"],
+      "keywords": ["签名", "签章", "电子签", "合同签署", "盖章"],
+      "api_file": "SIGN_SYS.apis.json"
+    },
+    {
+      "id": "OCR_SYS",
+      "name": "OCR系统",
+      "type": "external_service",
+      "aliases": ["OCR", "文字识别", "图片识别", "OCR系统"],
+      "keywords": ["OCR", "文字识别", "证件识别", "票据识别", "识别"],
+      "api_file": "OCR_SYS.apis.json"
+    },
+    {
+      "id": "BIGDATA_PLATFORM",
+      "name": "大数据平台",
+      "type": "external_platform",
+      "aliases": ["大数据", "数据平台", "DataPlatform", "BigData"],
+      "keywords": ["数据查询", "画像", "标签", "ETL", "数据同步", "离线任务"],
+      "api_file": "BIGDATA_PLATFORM.apis.json"
+    },
+    {
+      "id": "PRODUCT_MGMT",
+      "name": "商品管理系统",
+      "type": "external_system",
+      "aliases": ["商品中心", "全局商品系统", "PIM", "ProductCenter"],
+      "keywords": ["统一商品库", "全局SPU", "全局SKU", "全局类目", "外部商品同步"],
+      "api_file": "PRODUCT_MGMT.apis.json"
+    },
+    {
+      "id": "WMS",
+      "name": "仓储管理系统",
+      "type": "external_system",
+      "aliases": ["WMS", "第三方仓储系统", "实物库存系统", "Warehouse"],
+      "keywords": ["WMS库存", "实物入库", "实物出库", "仓储盘点", "库位管理", "仓储拣货"],
+      "api_file": "WMS.apis.json"
+    },
+    {
+      "id": "BILL_DOC_SYS",
+      "name": "票据系统",
+      "type": "external_system",
+      "aliases": ["财税票据系统", "票据中心", "BillCenter", "发票平台"],
+      "keywords": ["财税开票", "发票作废", "发票红冲", "金税电子发票", "外部电子票据"],
+      "api_file": "BILL_DOC_SYS.apis.json"
+    },
+    {
+      "id": "PORTAL_SYS",
+      "name": "Portal系统",
+      "type": "external_system",
+      "aliases": ["企业门户", "统一门户", "企业Portal", "SSOPortal"],
+      "keywords": ["企业门户首页", "统一待办", "全局权限菜单", "全公司公告"],
+      "api_file": "PORTAL_SYS.apis.json"
+    },
+    {
+      "id": "PROCURE_SYS",
+      "name": "采购系统",
+      "type": "external_system",
+      "aliases": ["供应链采购", "外部采购平台", "Procurement", "SRM"],
+      "keywords": ["供应商管理", "供应商询价", "供应链采购订单", "实物入库申请"],
+      "api_file": "PROCURE_SYS.apis.json"
+    },
+    {
+      "id": "ORDER_SYS",
+      "name": "订单系统",
+      "type": "external_system",
+      "aliases": ["全局订单中心", "统一订单中台", "GlobalOrder", "OMS"],
+      "keywords": ["全局订单号", "推单到中台", "中台支付状态", "统一售后退货", "统一资金退款"],
+      "api_file": "ORDER_SYS.apis.json"
+    },
+    {
+      "id": "LOGISTICS_SYS",
+      "name": "物流系统",
+      "type": "external_system",
+      "aliases": ["第三方物流", "实物配送", "快递平台", "Logistics", "TMS"],
+      "keywords": ["第三方物流网关", "快递运单", "物流轨迹跟踪", "实物发货对接", "快递签收回调", "同城实物配送"],
+      "api_file": "LOGISTICS_SYS.apis.json"
+    },
+    {
+      "id": "CS_SYS",
+      "name": "客服系统",
+      "type": "external_system",
+      "aliases": ["统一客服中台", "全局工单", "呼叫中心平台", "CustomerServiceCenter"],
+      "keywords": ["转接人工客服", "客服中台工单", "全局客诉", "客服IM回调", "客服呼叫"],
+      "api_file": "CS_SYS.apis.json"
+    }
+  ]
+}

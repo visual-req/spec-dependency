@@ -1,0 +1,12 @@
+{
+  "system_id": "SMS_PROVIDER",
+  "apis": [
+    {
+      "id": "SMS_SEND",
+      "name": "发送短信",
+      "method": "POST",
+      "path": "/sms/send",
+      "keywords": ["发送短信", "验证码", "短信通知", "templateId"]
+    }
+  ]
+}

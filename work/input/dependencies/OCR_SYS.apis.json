@@ -1,0 +1,26 @@
+{
+  "system_id": "OCR_SYS",
+  "apis": [
+    {
+      "id": "OCR_TEXT_BASIC",
+      "name": "通用文字识别",
+      "method": "POST",
+      "path": "/ocr/text",
+      "keywords": ["OCR", "文字识别", "图片转文字", "通用识别", "base64"]
+    },
+    {
+      "id": "OCR_IDCARD",
+      "name": "身份证识别",
+      "method": "POST",
+      "path": "/ocr/idcard",
+      "keywords": ["身份证", "证件识别", "姓名", "身份证号", "OCR"]
+    },
+    {
+      "id": "OCR_INVOICE",
+      "name": "发票/票据识别",
+      "method": "POST",
+      "path": "/ocr/invoice",
+      "keywords": ["发票", "票据", "金额", "税号", "OCR"]
+    }
+  ]
+}

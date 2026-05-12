@@ -1,0 +1,19 @@
+{
+  "system_id": "PAY_WECHAT",
+  "apis": [
+    {
+      "id": "WECHATPAY_PAY_CREATE",
+      "name": "创建支付",
+      "method": "POST",
+      "path": "/v3/pay/transactions/jsapi",
+      "keywords": ["下单", "JSAPI", "prepay_id", "openid"]
+    },
+    {
+      "id": "WECHATPAY_REFUND",
+      "name": "退款",
+      "method": "POST",
+      "path": "/v3/refund/domestic/refunds",
+      "keywords": ["退款", "refund", "refund_id"]
+    }
+  ]
+}

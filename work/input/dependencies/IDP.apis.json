@@ -1,0 +1,19 @@
+{
+  "system_id": "IDP",
+  "apis": [
+    {
+      "id": "IDP_AUTH",
+      "name": "鉴权/登录",
+      "method": "POST",
+      "path": "/oauth/token",
+      "keywords": ["登录", "token", "授权码", "client_id", "client_secret"]
+    },
+    {
+      "id": "IDP_USERINFO",
+      "name": "用户信息",
+      "method": "GET",
+      "path": "/oauth/userinfo",
+      "keywords": ["userinfo", "用户信息", "claims"]
+    }
+  ]
+}

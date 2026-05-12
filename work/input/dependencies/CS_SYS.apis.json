@@ -1,0 +1,33 @@
+{
+  "system_id": "CS_SYS",
+  "apis": [
+    {
+      "id": "CS_TICKET_CREATE",
+      "name": "创建工单",
+      "method": "POST",
+      "path": "/cs/tickets",
+      "keywords": ["工单", "创建工单", "投诉", "咨询"]
+    },
+    {
+      "id": "CS_TICKET_QUERY",
+      "name": "工单查询",
+      "method": "GET",
+      "path": "/cs/tickets/{id}",
+      "keywords": ["工单查询", "状态", "ticketId", "处理进度"]
+    },
+    {
+      "id": "CS_IM_SEND",
+      "name": "在线客服发送消息",
+      "method": "POST",
+      "path": "/cs/im/send",
+      "keywords": ["在线客服", "IM", "发送消息", "sessionId"]
+    },
+    {
+      "id": "CS_KB_SEARCH",
+      "name": "知识库检索",
+      "method": "GET",
+      "path": "/cs/kb/search",
+      "keywords": ["知识库", "FAQ", "检索", "search"]
+    }
+  ]
+}

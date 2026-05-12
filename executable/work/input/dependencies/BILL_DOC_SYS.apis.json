@@ -1,0 +1,33 @@
+{
+  "system_id": "BILL_DOC_SYS",
+  "apis": [
+    {
+      "id": "BILLDOC_INVOICE_ISSUE",
+      "name": "开票",
+      "method": "POST",
+      "path": "/billdoc/invoices",
+      "keywords": ["开票", "发票", "票据", "invoiceNo", "金额"]
+    },
+    {
+      "id": "BILLDOC_INVOICE_QUERY",
+      "name": "发票查询",
+      "method": "GET",
+      "path": "/billdoc/invoices/{id}",
+      "keywords": ["发票查询", "票据查询", "状态", "invoiceId"]
+    },
+    {
+      "id": "BILLDOC_INVOICE_VOID",
+      "name": "发票作废",
+      "method": "POST",
+      "path": "/billdoc/invoices/{id}/void",
+      "keywords": ["作废", "发票作废", "void", "作废原因"]
+    },
+    {
+      "id": "BILLDOC_INVOICE_RED",
+      "name": "红冲",
+      "method": "POST",
+      "path": "/billdoc/invoices/{id}/red",
+      "keywords": ["红冲", "冲红", "red", "冲红申请"]
+    }
+  ]
+}

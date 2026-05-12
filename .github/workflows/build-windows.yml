@@ -1,0 +1,46 @@
+name: build-windows
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: windows-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Build frontend dist
+        shell: bash
+        run: |
+          cd frontend
+          npm install --no-audit --no-fund
+          npm run build
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install backend deps + pyinstaller
+        shell: bash
+        run: |
+          python -m pip install -U pip
+          python -m pip install -r backend/requirements.txt pyinstaller
+
+      - name: Build spec_dep.exe (onefile)
+        shell: bash
+        run: |
+          rm -f executable/spec_dep.exe
+          python -m PyInstaller --noconfirm --onefile --name spec_dep --distpath executable --paths backend --add-data "frontend/dist;frontend/dist" backend/app/cli/main.py
+
+      - name: Upload executable directory
+        uses: actions/upload-artifact@v4
+        with:
+          name: spec_dep-windows
+          path: executable/

@@ -1,0 +1,19 @@
+{
+  "system_id": "OBJECT_STORAGE",
+  "apis": [
+    {
+      "id": "OBJ_PUT",
+      "name": "上传对象",
+      "method": "PUT",
+      "path": "/objects/{key}",
+      "keywords": ["上传", "putObject", "上传文件", "objectKey"]
+    },
+    {
+      "id": "OBJ_GET",
+      "name": "下载对象",
+      "method": "GET",
+      "path": "/objects/{key}",
+      "keywords": ["下载", "getObject", "下载文件", "downloadUrl"]
+    }
+  ]
+}

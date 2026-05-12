@@ -1,0 +1,19 @@
+{
+  "system_id": "FACE_RECOG",
+  "apis": [
+    {
+      "id": "FACE_VERIFY",
+      "name": "人脸核验",
+      "method": "POST",
+      "path": "/face/verify",
+      "keywords": ["人脸核验", "人脸比对", "face verify", "matchScore"]
+    },
+    {
+      "id": "FACE_LIVENESS",
+      "name": "活体检测",
+      "method": "POST",
+      "path": "/face/liveness",
+      "keywords": ["活体检测", "liveness", "眨眼", "动作检测"]
+    }
+  ]
+}

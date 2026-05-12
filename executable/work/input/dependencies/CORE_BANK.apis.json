@@ -1,0 +1,19 @@
+{
+  "system_id": "CORE_BANK",
+  "apis": [
+    {
+      "id": "CORE_BALANCE",
+      "name": "余额查询",
+      "method": "GET",
+      "path": "/accounts/balance",
+      "keywords": ["余额查询", "账户余额", "balance"]
+    },
+    {
+      "id": "CORE_TRANSFER",
+      "name": "转账/交易",
+      "method": "POST",
+      "path": "/transactions/transfer",
+      "keywords": ["转账", "交易", "入账", "出账", "transactionId"]
+    }
+  ]
+}

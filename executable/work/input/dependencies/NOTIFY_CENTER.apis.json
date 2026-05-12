@@ -1,0 +1,19 @@
+{
+  "system_id": "NOTIFY_CENTER",
+  "apis": [
+    {
+      "id": "NOTIFY_SEND",
+      "name": "发送通知",
+      "method": "POST",
+      "path": "/notify/send",
+      "keywords": ["发送通知", "推送", "站内信", "topic", "channel"]
+    },
+    {
+      "id": "NOTIFY_SUBSCRIBE",
+      "name": "订阅/退订",
+      "method": "POST",
+      "path": "/notify/subscribe",
+      "keywords": ["订阅", "退订", "subscribe", "unsubscribe"]
+    }
+  ]
+}

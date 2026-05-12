@@ -1,0 +1,33 @@
+{
+  "system_id": "WMS",
+  "apis": [
+    {
+      "id": "WMS_STOCK_QUERY",
+      "name": "库存查询",
+      "method": "GET",
+      "path": "/wms/stock",
+      "keywords": ["库存", "库存查询", "sku", "warehouseId"]
+    },
+    {
+      "id": "WMS_INBOUND_CREATE",
+      "name": "创建入库单",
+      "method": "POST",
+      "path": "/wms/inbound",
+      "keywords": ["入库", "入库单", "收货", "inboundNo"]
+    },
+    {
+      "id": "WMS_OUTBOUND_CREATE",
+      "name": "创建出库单",
+      "method": "POST",
+      "path": "/wms/outbound",
+      "keywords": ["出库", "出库单", "发货", "outboundNo"]
+    },
+    {
+      "id": "WMS_PICK_TASK",
+      "name": "拣货任务查询",
+      "method": "GET",
+      "path": "/wms/pick/tasks",
+      "keywords": ["拣货", "任务", "波次", "pickTask"]
+    }
+  ]
+}

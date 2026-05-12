@@ -1,0 +1,33 @@
+{
+  "system_id": "SSO",
+  "apis": [
+    {
+      "id": "SSO_AUTH",
+      "name": "鉴权/登录",
+      "method": "POST",
+      "path": "/oauth/token",
+      "keywords": ["登录", "鉴权", "token", "授权码", "client_id"]
+    },
+    {
+      "id": "SSO_REFRESH",
+      "name": "刷新Token",
+      "method": "POST",
+      "path": "/oauth/refresh",
+      "keywords": ["刷新token", "refresh_token", "token续期"]
+    },
+    {
+      "id": "SSO_USERINFO",
+      "name": "用户信息",
+      "method": "GET",
+      "path": "/oauth/userinfo",
+      "keywords": ["userinfo", "用户信息", "claims", "profile"]
+    },
+    {
+      "id": "SSO_LOGOUT",
+      "name": "注销",
+      "method": "POST",
+      "path": "/oauth/logout",
+      "keywords": ["注销", "logout", "退出登录"]
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "system_id": "BIGDATA_PLATFORM",
+  "apis": [
+    {
+      "id": "BDP_DATA_QUERY",
+      "name": "数据查询",
+      "method": "POST",
+      "path": "/bigdata/query",
+      "keywords": ["数据查询", "SQL", "查询任务", "dataset", "queryId"]
+    },
+    {
+      "id": "BDP_TAG_QUERY",
+      "name": "标签查询",
+      "method": "GET",
+      "path": "/bigdata/tags",
+      "keywords": ["标签", "画像", "用户标签", "tag"]
+    },
+    {
+      "id": "BDP_JOB_SUBMIT",
+      "name": "提交离线任务",
+      "method": "POST",
+      "path": "/bigdata/jobs",
+      "keywords": ["离线任务", "ETL", "作业提交", "job"]
+    },
+    {
+      "id": "BDP_JOB_STATUS",
+      "name": "任务状态查询",
+      "method": "GET",
+      "path": "/bigdata/jobs/{id}",
+      "keywords": ["任务状态", "jobId", "status", "progress"]
+    }
+  ]
+}

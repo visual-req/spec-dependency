@@ -1,0 +1,33 @@
+{
+  "system_id": "LOGISTICS_SYS",
+  "apis": [
+    {
+      "id": "LOGI_SHIP_CREATE",
+      "name": "创建发货单/运单",
+      "method": "POST",
+      "path": "/logistics/shipments",
+      "keywords": ["发货", "运单", "创建运单", "trackingNo"]
+    },
+    {
+      "id": "LOGI_TRACK_QUERY",
+      "name": "物流轨迹查询",
+      "method": "GET",
+      "path": "/logistics/tracks/{trackingNo}",
+      "keywords": ["物流轨迹", "轨迹查询", "tracking", "签收"]
+    },
+    {
+      "id": "LOGI_FEE_CALC",
+      "name": "运费试算",
+      "method": "POST",
+      "path": "/logistics/fee/calc",
+      "keywords": ["运费", "试算", "费用", "fee"]
+    },
+    {
+      "id": "LOGI_SIGN_CONFIRM",
+      "name": "签收确认",
+      "method": "POST",
+      "path": "/logistics/sign",
+      "keywords": ["签收", "签收确认", "delivery", "sign"]
+    }
+  ]
+}
