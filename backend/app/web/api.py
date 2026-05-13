@@ -33,9 +33,23 @@ def create_app():
     deps_json = _resolve_deps_json(cfg)
     catalog = DependencyCatalog.load(deps_json)
 
-    project_root = Path(__file__).resolve().parents[3]
     bundle_root = Path(getattr(sys, "_MEIPASS")).resolve() if getattr(sys, "frozen", False) and hasattr(sys, "_MEIPASS") else None
-    dist = (bundle_root / "frontend" / "dist") if bundle_root is not None else (project_root / "frontend" / "dist")
+    dist = None
+    if bundle_root is not None:
+        dist = (bundle_root / "frontend" / "dist").resolve()
+    else:
+        argv0 = str(sys.argv[0] or "") if isinstance(getattr(sys, "argv", None), list) and sys.argv else ""
+        if argv0.lower().endswith(".pyz"):
+            try:
+                base = Path(argv0).resolve().parent
+                cand = (base / "frontend" / "dist").resolve()
+                if cand.is_dir():
+                    dist = cand
+            except Exception:
+                dist = None
+        if dist is None:
+            project_root = Path(__file__).resolve().parents[3]
+            dist = (project_root / "frontend" / "dist").resolve()
     assets = dist / "assets"
     if assets.is_dir():
         app.mount("/assets", StaticFiles(directory=str(assets)), name="assets")

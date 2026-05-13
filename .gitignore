@@ -43,6 +43,8 @@ executable/run.sh
 # packaged binaries (platform-specific)
 executable/spec_dep
 executable/spec_dep.exe
+executable/spec_dep.pyz
+executable/python/
 
 # local build artifacts
 backend/.pyinstaller_build/
