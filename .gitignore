@@ -45,8 +45,12 @@ executable/spec_dep
 executable/spec_dep.exe
 executable/spec_dep.pyz
 executable/python/
+executable/frontend/
 
 # local build artifacts
 backend/.pyinstaller_build/
 backend/.pyinstaller_spec/
 backend/.pyinstaller_cache/
+backend/.zipapp_build/
+backend/.zipapp_venv/
+backend/.python-embed-*.zip
