@@ -2,7 +2,7 @@
 
 ### 运行环境
 
-- macOS / Linux / Windows（Windows 建议使用 `executable/start.bat`）
+- macOS / Linux / Windows
 - Python 3.11+（建议使用虚拟环境）
 
 ### Python 依赖

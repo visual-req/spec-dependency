@@ -12,9 +12,6 @@
 
 项目仓库中常见两份工作目录：
 - `work/input/dependencies/`：开发运行时使用（通常配置 `work_dir: work`）
-- `executable/work/input/dependencies/`：可执行分发目录的默认样例
-
-建议以 `work/input/dependencies/` 为主维护源数据；如果你需要让 `executable/` 下的分发目录也同步更新，请将同样修改同步到 `executable/work/input/dependencies/`。
 
 ### 清单结构约定
 
