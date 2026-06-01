@@ -2,54 +2,22 @@
 
 ### 1. 准备 work 目录
 
-初始化目录（可选）：
-
-```bash
-./executable/init_work.sh
-```
-
-Windows：
-
-```bat
-.\executable\init_work.bat
-```
-
 目录约定：
 - `work/input/req`：需求文档（.doc/.docx）
 - `work/input/dependencies`：外部系统清单 JSON
 - `work/output`：输出（JSON + XLSX）
 - `work/logs`：日志（前端/后端 JSONL）
 
+如目录不存在，可手动创建上述目录结构。
+
 ### 2. 准备配置文件
 
-配置文件通过环境变量 `SPEC_DEP_CONFIG` 指定。
-
-默认配置文件位置：
-- `executable/config.yaml`
+通过环境变量 `SPEC_DEP_CONFIG` 指定配置文件路径（例如 `./config.yaml`）。
 
 ### 3. 启动服务
 
 ```bash
-SPEC_DEP_CONFIG=./executable/config.yaml ./executable/start.sh web
-```
-
-或指定配置路径（自定义）：
-
-```bash
-SPEC_DEP_CONFIG=/path/to/config.yaml ./executable/start.sh web
-```
-
-Windows：
-
-```bat
-.\executable\start.bat web
-```
-
-如果需要指定 config：
-
-```bat
-set SPEC_DEP_CONFIG=C:\path\to\config.yaml
-.\executable\start.bat web
+SPEC_DEP_CONFIG=./config.yaml python -m backend.app.cli.main web --host 127.0.0.1 --port 8766
 ```
 
 ### 4. 使用页面
