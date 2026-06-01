@@ -64,4 +64,4 @@ Web UI 分为两页：
 - 清单维护（含 API 升级与 Swagger/OpenAPI 更新）： [docs/maintenance.md](docs/maintenance.md)
 - CLI： [docs/cli.md](docs/cli.md)
 - 工作流： [docs/workflow.md](docs/workflow.md)
-- 结构说明（原文件名）： [docs/structuer.md](docs/structuer.md)
+- 结构说明： [docs/structuer.md](docs/structuer.md)
