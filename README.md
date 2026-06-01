@@ -14,18 +14,14 @@
 
 ### 1) 准备配置文件（推荐）
 
-默认优先使用：
-- `~/Desktop/dependency/config.yaml`
-
-如果该文件不存在，会回退到：
-- `executable/config.yaml`
+准备一个配置文件（例如 `config.yaml`）。
 
 配置项说明见 [docs/manual.md](docs/manual.md)（包含 `server` / `work_dir` / `llm`）。
 
-### 2) 启动服务（固定用 run.sh）
+### 2) 启动服务
 
 ```bash
-sh executable/run.sh web --host 127.0.0.1 --port 8766
+python -m backend.app.cli.main web --host 127.0.0.1 --port 8766
 ```
 
 启动后访问：
@@ -34,7 +30,7 @@ sh executable/run.sh web --host 127.0.0.1 --port 8766
 如需显式指定配置文件：
 
 ```bash
-sh executable/run.sh /path/to/config.yaml web --host 127.0.0.1 --port 8766
+python -m backend.app.cli.main /path/to/config.yaml web --host 127.0.0.1 --port 8766
 ```
 
 ## 目录结构
@@ -44,8 +40,6 @@ sh executable/run.sh /path/to/config.yaml web --host 127.0.0.1 --port 8766
 - `work/input/req/`：待扫描的需求文档（可选，CLI 常用）
 - `work/output/<scan_id>/`：每次扫描的输出（scan.json、每个文件的 *.module_deps.json/*.xlsx）
 - `work/logs/`：运行日志
-
-仓库内同时包含 `executable/work/`（分发目录样例），维护建议见 [docs/maintenance.md](docs/maintenance.md)。
 
 ## 外部依赖清单维护
 
