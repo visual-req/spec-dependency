@@ -14,38 +14,8 @@ frontend/node/
 
 run.sh
 
-work/cache.yaml
-work/input/**
-!work/input/.gitkeep
-!work/input/dependencies/
-!work/input/dependencies/*.json
-work/output/**
-!work/output/.gitkeep
-work/logs/**
-!work/logs/.gitkeep
-work/uploads/**
-!work/uploads/.gitkeep
-
-executable/work/cache.yaml
-executable/work/input/**
-!executable/work/input/.gitkeep
-!executable/work/input/dependencies/
-!executable/work/input/dependencies/*.json
-executable/work/output/**
-!executable/work/output/.gitkeep
-executable/work/logs/**
-!executable/work/logs/.gitkeep
-executable/work/uploads/**
-!executable/work/uploads/.gitkeep
-
-executable/run.sh
-
-# packaged binaries (platform-specific)
-executable/spec_dep
-executable/spec_dep.exe
-executable/spec_dep.pyz
-executable/python/
-executable/frontend/
+work/
+executable/
 
 # local build artifacts
 backend/.pyinstaller_build/
